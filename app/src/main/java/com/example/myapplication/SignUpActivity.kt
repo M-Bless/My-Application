@@ -42,6 +42,10 @@ class SignUpActivity : AppCompatActivity() {
                 if (password == cPassword) {
                     Toast.makeText(this, "Sign up successful", Toast.LENGTH_LONG).show()
                     // Add sign-up logic (e.g., store user data, authenticate, etc.)
+                    val intent = Intent(this, DashboardActivity::class.java)
+                    startActivity(intent)
+                    finish()
+
                 } else {
                     Toast.makeText(this, "Passwords do not match", Toast.LENGTH_LONG).show()
                 }

@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
             if (username.isNotEmpty() && password.isNotEmpty()) {
                 Toast.makeText(this, "Input provided", Toast.LENGTH_LONG).show()
                 // Perform login logic here (e.g., authenticate the user)
+
+                // Navigate to DashboardActivity after successful login
+                val intent = Intent(this, DashboardActivity::class.java)
+                startActivity(intent)
+                finish()
+
             } else {
                 Toast.makeText(this, "Input required", Toast.LENGTH_LONG).show()
             }
