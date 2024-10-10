@@ -63,6 +63,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.appcompat)
     implementation(libs.firebase.auth)
+    implementation(libs.cardview)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
