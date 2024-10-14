@@ -8,172 +8,249 @@
     android:background="@color/Pink"
     tools:context=".MainActivity">
 
-  <GridLayout
-      android:layout_width="0sp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintBottom_toBottomOf="parent"
-      android:layout_height="0sp"
-      android:columnCount="2"
-      android:rowCount="3"
-      android:layout_margin="10dp"
-      >
+    <GridLayout
+        android:layout_width="0sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0sp"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:layout_margin="10dp"
+        >
 
-      <androidx.cardview.widget.CardView
-          android:id="@+id/cvMenstruation"
-          android:layout_columnWeight="1"
-          android:layout_rowWeight="1"
-          app:cardCornerRadius="15dp"
-          app:cardElevation="0dp"
-          android:layout_margin="10dp"
-          android:layout_width="0dp"
-          android:layout_height="0dp"
-          >
-          <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMenstruation"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-              <ImageView
-                  android:layout_width="114dp"
-                  android:layout_height="118dp"
-                  android:layout_centerInParent="true"
-                  android:src="@drawable/menstruation" />
+                <ImageView
+                    android:id="@id/cvMenstruation"
+                    android:layout_width="114dp"
+                    android:layout_height="118dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/menstruation" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MenstruationText"
+                    android:layout_below="@id/cvMenstruation"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="19dp"
+                    android:text="Menstruation"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
-          </RelativeLayout>
+            </RelativeLayout>
 
-      </androidx.cardview.widget.CardView>
-
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/cvPregnancy"
-          android:layout_columnWeight="1"
-          android:layout_rowWeight="1"
-          app:cardCornerRadius="15dp"
-          app:cardElevation="0dp"
-          android:layout_margin="10dp"
-          android:layout_width="0dp"
-          android:layout_height="0dp"
-          >
-          <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-              <ImageView
-                  android:layout_width="173dp"
-                  android:layout_height="187dp"
-                  android:layout_alignParentEnd="true"
-                  android:layout_marginEnd="0dp"
-                  android:src="@drawable/pregnancy" />
+        </androidx.cardview.widget.CardView>
 
 
-          </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvPregnancy"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-      </androidx.cardview.widget.CardView>
-
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/cvOvulation"
-          android:layout_columnWeight="1"
-          android:layout_rowWeight="1"
-          app:cardCornerRadius="15dp"
-          app:cardElevation="0dp"
-          android:layout_margin="10dp"
-          android:layout_width="0dp"
-          android:layout_height="0dp"
-          >
-          <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-              <ImageView
-                  android:layout_width="159dp"
-                  android:layout_height="195dp"
-                  android:layout_centerInParent="true"
-                  android:src="@drawable/ovulation" />
+                <ImageView
+                    android:id="@+id/ivPregnancy"
+                    android:layout_width="173dp"
+                    android:layout_height="187dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/pregnancy" />
 
 
-          </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/PregnancyText"
+                    android:layout_below="@id/ivPregnancy"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:text="Pregnancy Journey"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
-      </androidx.cardview.widget.CardView>
+            </RelativeLayout>
 
-      <androidx.cardview.widget.CardView
-          android:id="@+id/cvExercise"
-          android:layout_columnWeight="1"
-          android:layout_rowWeight="1"
-          app:cardCornerRadius="15dp"
-          app:cardElevation="0dp"
-          android:layout_margin="10dp"
-          android:layout_width="0dp"
-          android:layout_height="0dp"
-          >
-          <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-              <ImageView
-                  android:layout_width="142dp"
-                  android:layout_height="189dp"
-                  android:layout_centerInParent="true"
-                  android:src="@drawable/excercise" />
+        </androidx.cardview.widget.CardView>
 
 
-          </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvOvulation"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-      </androidx.cardview.widget.CardView>
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/cvBreastExamination"
-          android:layout_columnWeight="1"
-          android:layout_rowWeight="1"
-          app:cardCornerRadius="15dp"
-          app:cardElevation="0dp"
-          android:layout_margin="10dp"
-          android:layout_width="0dp"
-          android:layout_height="0dp"
-          >
-          <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-              <ImageView
-                  android:layout_width="138dp"
-                  android:layout_height="146dp"
-                  android:layout_centerInParent="true"
-                  android:src="@drawable/examination" />
+                <ImageView
+                    android:id="@+id/ivOvulation"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ovulation" />
 
 
-          </RelativeLayout>
 
-      </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/OvulationText"
+                    android:layout_below="@id/ivOvulation"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:text="Ovulation"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+            </RelativeLayout>
 
-      <androidx.cardview.widget.CardView
-          android:id="@+id/cvCramps"
-          android:layout_columnWeight="1"
-          android:layout_rowWeight="1"
-          app:cardCornerRadius="15dp"
-          app:cardElevation="0dp"
-          android:layout_margin="10dp"
-          android:layout_width="0dp"
-          android:layout_height="0dp"
-          >
-          <RelativeLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+        </androidx.cardview.widget.CardView>
 
-              <ImageView
-                  android:layout_width="155dp"
-                  android:layout_height="166dp"
-                  android:layout_centerInParent="true"
-                  android:src="@drawable/cramps" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvExercise"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivExercise"
+                    android:layout_width="132dp"
+                    android:layout_height="156dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/excercise" />
 
 
-          </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ExerciseText"
+                    android:layout_below="@id/ivExercise"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="Exercise"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
-      </androidx.cardview.widget.CardView>
+            </RelativeLayout>
 
-  </GridLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBreastExamination"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@id/cvBreastExamination"
+                    android:layout_width="138dp"
+                    android:layout_height="146dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/examination" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ExaminationText"
+                    android:layout_below="@id/cvBreastExamination"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="Self-breast Examination"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCramps"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivCramps"
+                    android:layout_width="155dp"
+                    android:layout_height="166dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/cramps" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CrampsText"
+                    android:layout_below="@id/ivCramps"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:text="Cramping"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
