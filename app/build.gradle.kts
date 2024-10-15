@@ -65,6 +65,8 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.firebase.auth)
     implementation(libs.cardview)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

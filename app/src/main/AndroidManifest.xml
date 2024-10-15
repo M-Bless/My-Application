@@ -9,22 +9,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-
-        <!-- Main Activity (Login Screen) -->
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".CrampingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExaminationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExerciseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OvulationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PregnancyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenstruationActivity"
+            android:exported="false" /> <!-- Main Activity (Login Screen) -->
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Sign-Up Activity -->
-        <activity android:name=".SignUpActivity" />
-
-        <!-- Dashboard Activity -->
+        </activity> <!-- Sign-Up Activity -->
+        <activity android:name=".SignUpActivity" /> <!-- Dashboard Activity -->
         <activity android:name=".DashboardActivity" />
-
     </application>
 
 </manifest>
