@@ -1,7 +1,8 @@
 plugins {
-    alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.google.gms.google.services)
+    id("com.android.application")
+    id("com.google.gms.google-services")
+
 }
 
 android {
@@ -67,6 +68,13 @@ dependencies {
     implementation(libs.cardview)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation("com.google.firebase:firebase-analytics")
+
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
