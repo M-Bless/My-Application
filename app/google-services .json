@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "507010255224",
+    "project_id": "period-tracker-7fa4d",
+    "storage_bucket": "period-tracker-7fa4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507010255224:android:711624ee88b860e7ed208d",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507010255224-8qopnaflfjn2b8ik0srcqg5lqvo7t1gb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "cca07064aa587dfcbb3802070ff4b15b0f5baca5"
+          }
+        },
+        {
+          "client_id": "507010255224-57jsjasak8qup2acqa64ai8ciairk39n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAPMKiBr8RiEj38G9pKXeFOQ7ZlsBtWe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507010255224-57jsjasak8qup2acqa64ai8ciairk39n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
