@@ -1,0 +1,543 @@
+{
+  "resourceType": "Questionnaire",
+  "language": "nb-NO",
+  "id": "d2dc9ddc-9a32-4cc2-85a8-942f4dd42669",
+  "status": "draft",
+  "publisher": "NHN",
+  "meta": {
+    "profile": [
+      "http://ehelse.no/fhir/StructureDefinition/sdf-Questionnaire"
+    ],
+    "tag": [
+      {
+        "system": "urn:ietf:bcp:47",
+        "code": "nb-NO",
+        "display": "Bokmål"
+      }
+    ],
+    "security": [
+      {
+        "code": "3",
+        "display": "Helsehjelp (Full)",
+        "system": "urn:oid:2.16.578.1.12.4.1.1.7618"
+      }
+    ]
+  },
+  "contact": [
+    {
+      "name": "http://www.nhn.no"
+    }
+  ],
+  "subjectType": [
+    "Patient"
+  ],
+  "extension": [
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-sidebar",
+      "valueCoding": {
+        "system": "http://helsenorge.no/fhir/ValueSet/sdf-sidebar",
+        "code": "1"
+      }
+    },
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-information-message",
+      "valueCoding": {
+        "system": "http://helsenorge.no/fhir/ValueSet/sdf-information-message",
+        "code": "1"
+      }
+    },
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefintion/sdf-itemControl-visibility",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://helsenorge.no/fhir/CodeSystem/AttachmentRenderOptions",
+            "code": "hide-help",
+            "display": "Hide help texts"
+          },
+          {
+            "system": "http://helsenorge.no/fhir/CodeSystem/AttachmentRenderOptions",
+            "code": "hide-sublabel",
+            "display": "Hide sublabel texts"
+          }
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "linkId": "eea9ab4a-f771-4141-f7bd-d01cd186bb23",
+      "type": "string",
+      "text": "First Name",
+      "required": true
+    },
+    {
+      "linkId": "0fa3b6f4-b042-45d8-89c7-93f830efe956",
+      "type": "string",
+      "text": "Middle Name"
+    },
+    {
+      "linkId": "c7562755-b93f-44fd-c997-9ed014066a7d",
+      "type": "string",
+      "text": "Last Name",
+      "required": true
+    },
+    {
+      "linkId": "05fd76b9-b663-4bc7-8be8-55c9ffaef31d",
+      "type": "integer",
+      "text": "Age",
+      "required": true
+    },
+    {
+      "linkId": "7b14c147-aa2d-4c16-a9e2-9bc9471ea000",
+      "type": "string",
+      "text": "Phone number",
+      "required": false
+    },
+    {
+      "linkId": "5f41515e-b580-46f5-8030-787ac278aa3e",
+      "type": "string",
+      "text": "Emergency phone number(someone close)",
+      "required": false
+    },
+    {
+      "linkId": "c5fb27e9-17d0-40ec-aa45-bbd8e41fa0c8",
+      "type": "string",
+      "text": "Area of residence",
+      "required": false
+    },
+    {
+      "linkId": "1b5a9566-2b73-4228-8fe2-a9c09c0cb036",
+      "type": "choice",
+      "text": "What is your marital status?",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "88e0fd69-9124-4c70-8f28-08087c544141",
+            "code": "single",
+            "system": "urn:uuid:1e01dc7e-df46-407a-84a0-0b5310f68343",
+            "display": "Single"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "d970492d-0c51-48af-8493-b0868e16cb04",
+            "code": "married",
+            "system": "urn:uuid:1e01dc7e-df46-407a-84a0-0b5310f68343",
+            "display": "Married"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "bdf447de-4f58-4920-df91-594005a467cc",
+            "code": "divorced",
+            "system": "urn:uuid:1e01dc7e-df46-407a-84a0-0b5310f68343",
+            "display": "Divorced"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "c0c27d7a-f930-403f-81ad-01361646e83f",
+            "code": "widowed",
+            "system": "urn:uuid:1e01dc7e-df46-407a-84a0-0b5310f68343",
+            "display": "Widowed"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "034a2cbd-a1f9-47a8-88e3-4b901a8f25ee",
+      "type": "choice",
+      "text": "Is this your first pregnancy?",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "b68f6141-be90-4a5a-896c-f394860bf344",
+            "code": "yes",
+            "system": "urn:uuid:dc03f668-b316-427e-f470-59ea91ea101c",
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "e9815d87-9373-4d18-9c15-23e659c6fa54",
+            "code": "no",
+            "system": "urn:uuid:dc03f668-b316-427e-f470-59ea91ea101c",
+            "display": "No"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "6e3ef840-0603-436b-c493-7dd055781094",
+      "type": "integer",
+      "text": "Gravida:\nHow many pregnancies have you had before(including miscarriage if any) ",
+      "required": false,
+      "enableWhen": [
+        {
+          "question": "034a2cbd-a1f9-47a8-88e3-4b901a8f25ee",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:uuid:dc03f668-b316-427e-f470-59ea91ea101c",
+            "code": "no"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "5125f29a-2a91-4cfb-83a6-695fb17a2b32",
+      "type": "integer",
+      "text": "How many children do you have that are alive",
+      "required": false,
+      "enableWhen": [
+        {
+          "question": "034a2cbd-a1f9-47a8-88e3-4b901a8f25ee",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:uuid:dc03f668-b316-427e-f470-59ea91ea101c",
+            "code": "no"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "e7eae7e4-7c95-4170-e4f4-3d411b38b673",
+      "type": "choice",
+      "text": "Do you have a child less than 1 year",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "c955d65a-64c2-492d-8c94-42edf65d787a",
+            "code": "yes",
+            "system": "urn:uuid:77571378-5c8c-4c54-8f8f-8f975eb7a7f1",
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "0da2c67e-9d91-4233-8b39-4dcc0f229888",
+            "code": "no",
+            "system": "urn:uuid:77571378-5c8c-4c54-8f8f-8f975eb7a7f1",
+            "display": "No"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "034a2cbd-a1f9-47a8-88e3-4b901a8f25ee",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:uuid:dc03f668-b316-427e-f470-59ea91ea101c",
+            "code": "no"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "d833cb82-2251-42ab-8681-58e0a31c109c",
+      "type": "choice",
+      "text": "Have you used any family planning method before?",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "1370eca8-4ac2-4af0-809a-276c41c99cd4",
+            "code": "yes",
+            "system": "urn:uuid:1725f8fb-8c88-4673-8758-48db83d07d2a",
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "12858e42-dad1-465b-da3d-21a0aafbbace",
+            "code": "no",
+            "system": "urn:uuid:1725f8fb-8c88-4673-8758-48db83d07d2a",
+            "display": "No"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "58f0bded-6d4f-4d13-9676-75b292063630",
+      "type": "choice",
+      "text": "During your last pregnancy, did you attend ANC clinic?",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "64adf187-22f9-4477-8d10-8533324b37c3",
+            "code": "yes",
+            "system": "urn:uuid:fe82f132-49d1-409c-94d7-f2e0d438e014",
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "442c37c2-e2f4-4e99-8d1e-7a5c3f0abe82",
+            "code": "no",
+            "system": "urn:uuid:fe82f132-49d1-409c-94d7-f2e0d438e014",
+            "display": "No"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "034a2cbd-a1f9-47a8-88e3-4b901a8f25ee",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:uuid:dc03f668-b316-427e-f470-59ea91ea101c",
+            "code": "no"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "0b863fdb-5000-4154-825e-ac4a0669b980",
+      "type": "choice",
+      "text": "Explain the family planning method/contraception method",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "134e6b1d-9a48-4f0e-d7d6-06038a9b444e",
+            "code": "oral-contraceptive-pills",
+            "system": "urn:uuid:efd67ef5-2b4e-40d3-f4aa-1c7c7d09144a",
+            "display": "oral contraceptive pills"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "2dd67a54-54fc-47c2-d437-14fef67839be",
+            "code": "iud(intrauterine-device)",
+            "system": "urn:uuid:efd67ef5-2b4e-40d3-f4aa-1c7c7d09144a",
+            "display": "IUD(intrauterine device)"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "58ea9d76-f93c-42d1-8b67-0466ba1430b2",
+            "code": "-implants",
+            "system": "urn:uuid:efd67ef5-2b4e-40d3-f4aa-1c7c7d09144a",
+            "display": " implants"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "42a2a31f-0334-4ccb-8dc4-bae5916635da",
+            "code": "injectables",
+            "system": "urn:uuid:efd67ef5-2b4e-40d3-f4aa-1c7c7d09144a",
+            "display": "injectables"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "8d656ed8-c548-4126-83f8-61ffafab5df4",
+            "code": "-condoms",
+            "system": "urn:uuid:efd67ef5-2b4e-40d3-f4aa-1c7c7d09144a",
+            "display": " condoms"
+          }
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "d833cb82-2251-42ab-8681-58e0a31c109c",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:uuid:1725f8fb-8c88-4673-8758-48db83d07d2a",
+            "code": "yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "20d5b1dd-b2ec-4271-f4f2-e04380ff3f07",
+      "type": "choice",
+      "text": "How did you give birth to your last child (including for a child who may now be\ndeceased). Through:",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "7c533782-0393-49e8-9530-f860d81144b7",
+            "code": "vaginal-delivery",
+            "system": "urn:uuid:c252127d-55d7-4424-ddd5-63f1f56f1f63",
+            "display": "Vaginal Delivery"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "6bbd3f67-4aea-49cd-93b9-ebc7ea87d960",
+            "code": "c-section-(cesarean-birth)",
+            "system": "urn:uuid:c252127d-55d7-4424-ddd5-63f1f56f1f63",
+            "display": "C-section (Cesarean birth)"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "506de8b5-706c-4a19-8088-36ecfc5723a1",
+            "code": "assisted-vaginal-delivery-(vacuum-or-forceps)",
+            "system": "urn:uuid:c252127d-55d7-4424-ddd5-63f1f56f1f63",
+            "display": "Assisted vaginal delivery (vacuum or forceps)"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "98cbe25c-c246-40ba-8c1c-40eadabb7f14",
+            "code": "other",
+            "system": "urn:uuid:c252127d-55d7-4424-ddd5-63f1f56f1f63",
+            "display": "Other"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "034a2cbd-a1f9-47a8-88e3-4b901a8f25ee",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:uuid:dc03f668-b316-427e-f470-59ea91ea101c",
+            "code": "no"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "99b259be-21bc-4de0-ffc2-b2e6e1849bcd",
+      "type": "string",
+      "text": "If you picked other, give the details",
+      "required": false,
+      "enableWhen": [
+        {
+          "question": "20d5b1dd-b2ec-4271-f4f2-e04380ff3f07",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:uuid:c252127d-55d7-4424-ddd5-63f1f56f1f63",
+            "code": "other"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "dd973356-dd51-4ed7-933f-9b0697a33d5d",
+      "type": "choice",
+      "text": "Is this your first antenatal visit for this pregnancy?",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "5f3ce7b0-0fc9-4f6f-8b5c-291a946ae36b",
+            "code": "yes",
+            "system": "urn:uuid:c5d45a58-d7ae-4728-ba58-99ec6a711bd6",
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "a2afccf3-81c8-4048-c479-b8a56582abab",
+            "code": "no",
+            "system": "urn:uuid:c5d45a58-d7ae-4728-ba58-99ec6a711bd6",
+            "display": "No"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "7006cb4b-9253-4b0e-86fd-5d3f69e24540",
+      "type": "string",
+      "text": "When last did you experience your menstruation flow",
+      "required": false
+    }
+  ]
+}

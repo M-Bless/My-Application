@@ -1,6 +1,9 @@
 <resources>
     <!-- Base application theme -->
     <style name="Theme.MyApplication" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Add this in themes.xml or styles.xml -->
+
+
         <!-- Customize your theme here -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/purple_700</item>

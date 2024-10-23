@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
+
         <activity
             android:name=".CrampingActivity"
             android:exported="false" />
@@ -41,6 +39,8 @@
         </activity> <!-- Sign-Up Activity -->
         <activity android:name=".SignUpActivity" /> <!-- Dashboard Activity -->
         <activity android:name=".DashboardActivity" />
+
+
     </application>
 
 </manifest>
